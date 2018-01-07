@@ -44,7 +44,7 @@ class SimplePIController:
 
 
 controller = SimplePIController(0.1, 0.002)
-set_speed = 9
+set_speed = 25
 controller.set_desired(set_speed)
 
 
@@ -99,7 +99,7 @@ if __name__ == '__main__':
     parser.add_argument(
         'model',
         type=str,
-        help='Path to model h5 file. Model should be on the same path.'
+        help='/home/pepelepoe/Code/USelfDriving/CarND-Behavioral-Cloning-P3/model.h5'
     )
     parser.add_argument(
         'image_folder',
