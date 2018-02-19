@@ -82,9 +82,9 @@ For details about how I created the training data, see the next section.
 
 #### 1. Solution Design Approach
 
-The overall strategy for deriving a model architecture was to ...
+A driving_log.csv file was created after simulator is manually run by user and frames are recorded. Each run of simulator updates this file with more data. The images recorded (center, left and right) are used as the featureset while the steering measurements are used as the labelset. This featureset is used to train the network and predict the steering measurements.
 
-My first step was to use a convolution neural network model similar to the ... I thought this model might be appropriate because ...
+The overall strategy for deriving a model architecture was to experiment with the different models provided on lectures and evaluating the losses associated with model. I started with the LENET model using a convolution (filter size of 6, kernel size of 5 and strides of 5), maxpooling and dropout layers. This sequence repeats itself one more time and finishes off with a densely connected NN layer of 1. The results were satisfactory until the first big curve where the car failed to complete it. After trying LENET I implemented NVIDIA architecture which I have already described.
 
 In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. I found that my first model had a low mean squared error on the training set but a high mean squared error on the validation set. This implied that the model was overfitting.
 
